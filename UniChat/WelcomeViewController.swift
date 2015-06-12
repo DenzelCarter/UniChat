@@ -18,6 +18,25 @@ class WelcomeViewController: UIViewController {
     
     
     @IBAction func loginClick(sender: AnyObject) {
+        var username = usernameTxt.text
+        var password = passwordTxt.text
+        
+        if password.isEmpty || username.isEmpty {
+            
+        } else {
+            
+            PFUser.logInWithUsernameInBackground(username, password: password, block:
+                { (user: PFUser?, error:NSError?) -> Void in
+                    if user != nil {
+                        self.performSegueWithIdentifier("LoginUser", sender: self)
+                        
+                    } else {
+                        
+                        
+                    }
+                
+            })
+        }
     }
     
     

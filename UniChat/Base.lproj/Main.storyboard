@@ -38,7 +38,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhD-jG-YJg">
                                 <rect key="frame" x="166" y="222" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjH-wz-joI">
@@ -193,6 +193,36 @@
             </objects>
             <point key="canvasLocation" x="807.5" y="1165.5"/>
         </scene>
+        <!--Status Detailed View Controller-->
+        <scene sceneID="8MM-6i-uPg">
+            <objects>
+                <viewController storyboardIdentifier="statusDetailViewStory" id="Uet-n5-c7o" customClass="StatusDetailedViewController" customModule="UniChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AGA-w2-pfe"/>
+                        <viewControllerLayoutGuide type="bottom" id="8pZ-mE-Lyf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Ge-nb-Wpo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWD-2q-H3l">
+                                <rect key="frame" x="16" y="84" width="343" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="detailedTxt" destination="OWD-2q-H3l" id="kFG-VM-hCk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12y-kI-eEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127.5" y="1165.5"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="SSn-b8-nu6">
             <objects>
@@ -212,6 +242,9 @@
                                     <navigationItem title="Title" id="9cb-wA-V2n">
                                         <barButtonItem key="leftBarButtonItem" title="Logout" id="UDx-61-j7f">
                                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="logout_click:" destination="HjH-Bp-b87" id="ZBR-lc-s4Y"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Update" id="LGV-m4-ljD">
                                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -222,12 +255,53 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9Ld-hy-N57">
+                                <rect key="frame" x="-5" y="44" width="386" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainCell" rowHeight="90" id="Qdz-wZ-a50" customClass="MainViewCell" customModule="UniChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qdz-wZ-a50" id="phH-vO-s7j">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6n-Zm-DFV">
+                                                    <rect key="frame" x="14" y="45" width="359" height="36.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LiKkqgjzT" translatesAutoresizingMaskIntoConstraints="NO" id="b5p-dV-aTV">
+                                                    <rect key="frame" x="8" y="0.0" width="41" height="39"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnV-FL-3r1">
+                                                    <rect key="frame" x="57" y="9" width="159" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageTxt" destination="b5p-dV-aTV" id="dQf-Pk-5fr"/>
+                                            <outlet property="messageTxt" destination="d6n-Zm-DFV" id="IZn-DP-mwB"/>
+                                            <outlet property="usernameTxt" destination="ZnV-FL-3r1" id="hSj-U4-nGR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HjH-Bp-b87" id="njC-KD-BxP"/>
+                                    <outlet property="delegate" destination="HjH-Bp-b87" id="rNX-pu-oR7"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="resultsTable" destination="9Ld-hy-N57" id="Rg5-M6-o8q"/>
                         <segue destination="YmW-Md-wO8" kind="presentation" identifier="postStatus" id="gP7-KT-utf"/>
+                        <segue destination="qjJ-uV-pod" kind="presentation" identifier="logout" id="eL8-0t-hJc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJB-xF-qOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -235,6 +309,9 @@
             <point key="canvasLocation" x="296.5" y="1165.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LiKkqgjzT" width="300" height="300"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oRZ-NU-h9c"/>
     </inferredMetricsTieBreakers>

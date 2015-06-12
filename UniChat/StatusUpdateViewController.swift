@@ -45,6 +45,7 @@ class StatusUpdateViewController: UIViewController {
                 
                 if error == nil {
                     println("Posted")
+                    self.dismissViewControllerAnimated(true, completion: nil)
                     
                 } else {
                     println("Something went wrong")

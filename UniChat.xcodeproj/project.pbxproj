@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062144DA1B2B6D89009FC3A3 /* StatusDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062144D91B2B6D89009FC3A3 /* StatusDetailedViewController.swift */; };
 		065EEEF81B2A25FF00DC891B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065EEEF71B2A25FF00DC891B /* AppDelegate.swift */; };
 		065EEF011B2A25FF00DC891B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065EEEFF1B2A25FF00DC891B /* Main.storyboard */; };
 		065EEF031B2A25FF00DC891B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065EEF021B2A25FF00DC891B /* Images.xcassets */; };
@@ -30,6 +31,7 @@
 		065EEF3A1B2A3A4400DC891B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 065EEF391B2A3A4400DC891B /* libz.dylib */; };
 		065EEF991B2A807D00DC891B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065EEF981B2A807D00DC891B /* HomeViewController.swift */; };
 		065EEF9B1B2A836300DC891B /* StatusUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065EEF9A1B2A836300DC891B /* StatusUpdateViewController.swift */; };
+		065EEF9D1B2B485800DC891B /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065EEF9C1B2B485800DC891B /* MainViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		062144D91B2B6D89009FC3A3 /* StatusDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusDetailedViewController.swift; sourceTree = "<group>"; };
 		065EEEF21B2A25FF00DC891B /* UniChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065EEEF61B2A25FF00DC891B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		065EEEF71B2A25FF00DC891B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		065EEF391B2A3A4400DC891B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		065EEF981B2A807D00DC891B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		065EEF9A1B2A836300DC891B /* StatusUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusUpdateViewController.swift; sourceTree = "<group>"; };
+		065EEF9C1B2B485800DC891B /* MainViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 				065EEF1B1B2A267300DC891B /* Bolts.framework */,
 				065EEEF71B2A25FF00DC891B /* AppDelegate.swift */,
 				065EEEFF1B2A25FF00DC891B /* Main.storyboard */,
+				062144D91B2B6D89009FC3A3 /* StatusDetailedViewController.swift */,
+				065EEF9C1B2B485800DC891B /* MainViewCell.swift */,
 				065EEF981B2A807D00DC891B /* HomeViewController.swift */,
 				065EEF351B2A370300DC891B /* SignUpViewController.swift */,
 				065EEF9A1B2A836300DC891B /* StatusUpdateViewController.swift */,
@@ -280,6 +286,8 @@
 				065EEF361B2A370300DC891B /* SignUpViewController.swift in Sources */,
 				065EEF9B1B2A836300DC891B /* StatusUpdateViewController.swift in Sources */,
 				065EEEF81B2A25FF00DC891B /* AppDelegate.swift in Sources */,
+				065EEF9D1B2B485800DC891B /* MainViewCell.swift in Sources */,
+				062144DA1B2B6D89009FC3A3 /* StatusDetailedViewController.swift in Sources */,
 				065EEF221B2A29F200DC891B /* WelcomeViewController.swift in Sources */,
 				065EEF991B2A807D00DC891B /* HomeViewController.swift in Sources */,
 			);
@@ -485,6 +493,7 @@
 				065EEF171B2A25FF00DC891B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		065EEF181B2A25FF00DC891B /* Build configuration list for PBXNativeTarget "UniChatTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +502,7 @@
 				065EEF1A1B2A25FF00DC891B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
